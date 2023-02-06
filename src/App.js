@@ -1,24 +1,45 @@
-import logo from './logo.svg';
+
 import './App.css';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
+import playerData from './fakedata/MOCK_DATA.json'
+import Header from './components/Header/Header';
+import Auction from './components/Auction/Auction';
+
 
 function App() {
+  // const [plData, setPlData] = useState([]);
+
+  // useEffect( () => {
+  //       setPlData(playerData);
+  //       console.log(plData);
+  //       }, [])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+       <Header></Header>
+       <Auction></Auction>
+       {/* <Auction></Auction> */}
+      {/* <h1>{plData.length}</h1>
+      <ul>
+      {
+        
+        plData.map(data=>{
+          return(
+            <div>
+              <p>{data.first_name} { data.last_name}</p>
+            <img src={data.img} alt="" />
+            
+            </div> 
+          )
+        })
+      }
+      
+      </ul> */}
+     
     </div>
+      
   );
 }
 
